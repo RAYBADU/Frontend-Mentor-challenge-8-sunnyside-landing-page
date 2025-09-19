@@ -46,22 +46,37 @@ nav li a:hover {
 }
 
 .menu {
-  width: 300px;
-  height: 300px;
-  position: absolute;
+  width: 200px;
+  height: 280px;
+  position: fixed;
   top: 5%;
-  left: 34%;
+  left: 30%;
   background-color: white;
   border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: popin 0.3s ease forwards;
   display: none;
+  z-index: 1000;
 }
+
+@keyframes popin {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .menu ul {
   text-align: center;
   margin-top: 4rem;
 }
 .close-btn {
   position: absolute;
-  left: 85%;
+  left: 75%;
   top: 5%;
   background-color: white;
   border-style: none;
@@ -357,10 +372,14 @@ a:hover {
   .img3 p {
     position: relative;
     right: 50%;
+    text-wrap: wrap;
   }
   .img4 {
     width: 100vw;
     height: 50vh;
+  }
+  .img4 p {
+    text-wrap: wrap;
   }
 
   .container {
